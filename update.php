@@ -15,8 +15,9 @@
 <html>
 
  <head>
-     <meta charset="UTF-8" />
+     <meta charset="UTF-8"/>
      <title>修改會員資料</title>
+	 <link rel="stylesheet" type="text/css" href="style.css">
  </head>
  <body>
 

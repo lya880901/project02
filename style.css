@@ -1,24 +1,15 @@
-<style>
-
-body {
-  background-color: pink;
-}
 h1 {
-	color: blue;
-	text-align: center;
+	margin: auto;
+    width: 25%;
+    border: 3px solid red;
+    padding: 5px;
 }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+input {
+    margin: auto;
+    width: 25%;
+    border: 3px solid pink;
+    padding: 5px;
 }
-tr {
-  color: red;
-  text-align: center;
+table:th {
+	border-color:orange;
 }
-td {
-  color: blue;
-  text-align: center;
-}
-</style>
-

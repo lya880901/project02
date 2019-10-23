@@ -16,6 +16,7 @@ if (isset($_POST["action"])&&($_POST["action"] == "add")) {
 <head>
     <meta charset="UTF-8" />
     <title>新增資料</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <form action="" method="post" name="formAdd" id="formAdd">

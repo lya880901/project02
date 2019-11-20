@@ -13,16 +13,20 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="head">
+<ul>
+  <li><a class="active" href="index.php">主頁</a></li>
+  <li><a href="create.php">新增</a></li>
+  <li><a href="update.php">更新</a></li>
+</ul>
+<div class="content">
 <!--<div id="app">-->
 <h1>籃球</h1>
-</div>
 <!--<input type="text" v-model="message">-->
-<p>目前資料筆數：<?php echo $total_records;?>，<a href='create.php'><!--v-on:click="create(新增)"--><!--{{message}}-->新增資料</a></p>
+<p>目前資料筆數：<?php echo $total_records;?>，<a href='create.php'><button type="button">新增資料</button></a></p>
 <div class="tablecenter">
 <table border="1">
     <tr>
-        <!--th>ID</th>-->
+        <!--<th>ID</th>-->
         <th>背號</th>
 		<th>姓名</th>
 		<th>2分命中</th>
@@ -53,6 +57,7 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 ?>
 </table>
+</div>
 <!--<script src="style.js" type="text/javascript"></script>
 <script src="https://unpkg.com/vue"></script>
 </div>-->

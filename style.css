@@ -1,15 +1,60 @@
+body {
+	margin:0;
+	background-color:green;
+	background-image: url("07.jpg");
+}
 h1 {
-	margin: auto;
-    width: 25%;
+	text-align: center;
+    width: 75%;
     border: 3px solid red;
     padding: 5px;
 }
+p{
+	width:75%;
+}
 input {
-    margin: auto;
-    width: 25%;
+    width: 75%;
     border: 3px solid pink;
     padding: 5px;
 }
-table:th {
+table {
+	width: 75%;
+	border-style: dotted;
 	border-color:orange;
+	text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: red;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.content{
+  margin-left:25%;
+  padding:1px 16px;
+  height:1000px;
+}
+.tablecenter{
+	margin:auto;
+	padding:20px;
+	
 }

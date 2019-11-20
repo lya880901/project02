@@ -26,6 +26,12 @@ if (isset($_POST["action"])&&($_POST["action"] == "add")) {
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<ul>
+  <li><a class="active" href="index.php">主頁</a></li>
+  <li><a href="create.php">新增</a></li>
+  <li><a href="update.php">更新</a></li>
+</ul>
+<div class="content">
 <form action="" method="post" name="formAdd" id="formAdd">
 請輸入背號：<input type="int" name="number" id="number"><br/>
 請輸入姓名：<input type="char" name="name" id="name"><br/>
@@ -40,5 +46,6 @@ if (isset($_POST["action"])&&($_POST["action"] == "add")) {
 <input type="submit" name="button" value="新增資料">
 <input type="reset" name="button2" value="重新填寫">
 </form>
+</divw>
 </body>
 </html>

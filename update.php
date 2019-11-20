@@ -27,7 +27,12 @@
 	 <link rel="stylesheet" type="text/css" href="style.css">
  </head>
  <body>
-
+<ul>
+  <li><a class="active" href="index.php">主頁</a></li>
+  <li><a href="create.php">新增</a></li>
+  <li><a href="update.php">更新</a></li>
+</ul>
+<div class="content">
  <form action="" method="post" name="formAdd" id="formAdd">
       
      請輸入背號：<input type="int" name="number" id="number" value=" <?php echo $number ?>"><br/>
@@ -42,6 +47,7 @@
      <input type="hidden" name="action" value="update">
      <input type="submit" name="button" value="修改資料">
  </form>
+</div>
  </body>
  </html>
  <?php

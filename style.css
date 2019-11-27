@@ -1,12 +1,13 @@
 body {
+	width: 75%;
 	margin:0;
 	background-color:green;
 	background-image: url("07.jpg");
+	background-repeat: no-repeat;
 }
 h1 {
 	text-align: center;
     width: 75%;
-    border: 3px solid red;
     padding: 5px;
 }
 p{

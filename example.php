@@ -34,11 +34,15 @@
 			<th>聯盟</th>
 			<th>屆別</th>
 	    </tr>
-		<tr>
-		    <td>2019/12/08</td>
-		    <td>TEAMPOWER運動聯盟</td>
-		    <td>1</td>
-		</tr>
+<?php
+while($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>";
+    echo "<td>".$row['date']."</td>";
+    echo "<td>".$row['league']."</td>";
+	echo "<td>".$row['Farewell']."</td>";
+    echo "</tr>";
+}
+?>
 	</table>
 </div>
 </section>
@@ -58,26 +62,30 @@
 			<th>T</th>
 			<th>結果</th>
 	    </tr>
-		<tr>
-		    <td>EX1</td>
-		    <td>SCORE1</td>
-		    <td>SCORE2</td>
-		    <td>SCORE3</td>
-		    <td>SCORE4</td>
-		    <td>0</td>
-		    <td>TOTAL</td>
-		    <td>結果</td>					
-		</tr>
-		<tr>
-		    <td>EX2</td>
-		    <td>SCORE1</td>
-		    <td>SCORE2</td>
-		    <td>SCORE3</td>
-		    <td>SCORE4</td>
-		    <td>0</td>
-		    <td>TOTAL</td>
-		    <td>結果</td>					
-		</tr>
+<?php
+while($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>";
+    echo "<td>".$row['team1']."</td>";
+    echo "<td>".$row['T1S1']."</td>";
+	echo "<td>".$row['T1S2']."</td>";
+	echo "<td>".$row['T1S3']."</td>";
+	echo "<td>".$row['T1S4']."</td>";
+	echo "<td>".$row['T1OT']."</td>";
+	echo "<td>".$row['T1TOTAL']."</td>";
+	echo "<td>".$row['T1RESULT']."</td>";
+    echo "</tr>";
+	echo "<tr>";
+    echo "<td>".$row['team2']."</td>";
+    echo "<td>".$row['T2S1']."</td>";
+	echo "<td>".$row['T2S2']."</td>";
+	echo "<td>".$row['T2S3']."</td>";
+	echo "<td>".$row['T2S4']."</td>";
+	echo "<td>".$row['T2OT']."</td>";
+	echo "<td>".$row['T2TOTAL']."</td>";
+	echo "<td>".$row['T2RESULT']."</td>";
+	echo "</tr>";
+}
+?>
 	</table>
 </div>
 </section>
@@ -109,50 +117,54 @@
 			<th>TO</th>
 			<th>PF</th>
 		</tr>
-		<tr>
-		    <td>1</td>
-		    <td>M1</td>
-		    <td>NUM1</td>
-		    <td>NUM2</td>
-		    <td>NUM3</td>
-		    <td>%</td>
-		    <td>NUM4</td>
-		    <td>NUM5</td>
-		    <td>%</td>
-		    <td>NUM6</td>
-		    <td>NUM7</td>
-		    <td>%</td>
-		    <td>NUM8</td>
-		    <td>NUM9</td>
-		    <td>NUM10</td>
-		    <td>NUM11</td>
-		    <td>NUM12</td>
-		    <td>NUM13</td>
-		    <td>NUM14</td>
-		    <td>NUM15</td>																
-		</tr>
-		<tr>
-		    <td>無</td>
-		    <td>總計</td>
-		    <td>NUM1</td>
-		    <td>NUM2</td>
-		    <td>NUM3</td>
-		    <td>%</td>
-		    <td>NUM4</td>
-		    <td>NUM5</td>
-		    <td>%</td>
-		    <td>NUM6</td>
-		    <td>NUM7</td>
-		    <td>%</td>
-		    <td>NUM8</td>
-		    <td>NUM9</td>
-		    <td>NUM10</td>
-		    <td>NUM11</td>
-		    <td>NUM12</td>
-		    <td>NUM13</td>
-		    <td>NUM14</td>
-		    <td>NUM15</td>																
-		</tr>
+<?php
+while($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>";
+    echo "<td>".$row['#1']."</td>";
+    echo "<td>".$row['T1name']."</td>";
+	echo "<td>".$row['T1pts']."</td>";
+	echo "<td>".$row['T1fgm']."</td>";
+	echo "<td>".$row['T1fga']."</td>";
+	echo "<td>".$row['T1fg%']."</td>";
+	echo "<td>".$row['T13pm']."</td>";
+	echo "<td>".$row['T13pa']."</td>";
+    echo "<td>".$row['T13p%']."</td>";
+    echo "<td>".$row['T1ftm']."</td>";
+	echo "<td>".$row['T1fta']."</td>";
+	echo "<td>".$row['T1ft%']."</td>";
+	echo "<td>".$row['T1off']."</td>";
+	echo "<td>".$row['T1def']."</td>";
+	echo "<td>".$row['T1reb']."</td>";
+	echo "<td>".$row['T1ast']."</td>";
+	echo "<td>".$row['T1stl']."</td>";
+	echo "<td>".$row['T1blk']."</td>";
+	echo "<td>".$row['T1to']."</td>";
+	echo "<td>".$row['T1pf']."</td>";
+    echo "</tr>";
+	echo "<tr>";
+    echo "<td>".$row['none']."</td>";
+    echo "<td>".$row['T1totaltotal']."</td>";
+	echo "<td>".$row['T1totalpts']."</td>";
+	echo "<td>".$row['T1totalfgm']."</td>";
+	echo "<td>".$row['T1totalfga']."</td>";
+	echo "<td>".$row['T1totalfg%']."</td>";
+	echo "<td>".$row['T1total3pm']."</td>";
+	echo "<td>".$row['T1total3pa']."</td>";
+    echo "<td>".$row['T1total3p%']."</td>";
+    echo "<td>".$row['T1totalftm']."</td>";
+	echo "<td>".$row['T1totalfta']."</td>";
+	echo "<td>".$row['T1totalft%']."</td>";
+	echo "<td>".$row['T1totaloff']."</td>";
+	echo "<td>".$row['T1totaldef']."</td>";
+	echo "<td>".$row['T1totalreb']."</td>";
+	echo "<td>".$row['T1totalast']."</td>";
+	echo "<td>".$row['T1totalstl']."</td>";
+	echo "<td>".$row['T1totalblk']."</td>";
+	echo "<td>".$row['T1totalto']."</td>";
+	echo "<td>".$row['T1totalpf']."</td>";	
+	echo "</tr>";
+}
+?>
 	</table>
 </div>
 </section>
@@ -184,50 +196,54 @@
 			<th>TO</th>
 			<th>PF</th>
 		</tr>
-		<tr>
-		    <td>1</td>
-		    <td>M1</td>
-		    <td>NUM1</td>
-		    <td>NUM2</td>
-		    <td>NUM3</td>
-		    <td>%</td>
-		    <td>NUM4</td>
-		    <td>NUM5</td>
-		    <td>%</td>
-		    <td>NUM6</td>
-		    <td>NUM7</td>
-		    <td>%</td>
-		    <td>NUM8</td>
-		    <td>NUM9</td>
-		    <td>NUM10</td>
-		    <td>NUM11</td>
-		    <td>NUM12</td>
-		    <td>NUM13</td>
-		    <td>NUM14</td>
-		    <td>NUM15</td>																
-		</tr>
-		<tr>
-		    <td>無</td>
-		    <td>總計</td>
-		    <td>NUM1</td>
-		    <td>NUM2</td>
-		    <td>NUM3</td>
-		    <td>%</td>
-		    <td>NUM4</td>
-		    <td>NUM5</td>
-		    <td>%</td>
-		    <td>NUM6</td>
-		    <td>NUM7</td>
-		    <td>%</td>
-		    <td>NUM8</td>
-		    <td>NUM9</td>
-		    <td>NUM10</td>
-		    <td>NUM11</td>
-		    <td>NUM12</td>
-		    <td>NUM13</td>
-		    <td>NUM14</td>
-		    <td>NUM15</td>																
-		</tr>
+<?php
+while($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>";
+    echo "<td>".$row['#1']."</td>";
+    echo "<td>".$row['T2name']."</td>";
+	echo "<td>".$row['T2pts']."</td>";
+	echo "<td>".$row['T2fgm']."</td>";
+	echo "<td>".$row['T2fga']."</td>";
+	echo "<td>".$row['T2fg%']."</td>";
+	echo "<td>".$row['T23pm']."</td>";
+	echo "<td>".$row['T23pa']."</td>";
+    echo "<td>".$row['T23p%']."</td>";
+    echo "<td>".$row['T2ftm']."</td>";
+	echo "<td>".$row['T2fta']."</td>";
+	echo "<td>".$row['T2ft%']."</td>";
+	echo "<td>".$row['T2off']."</td>";
+	echo "<td>".$row['T2def']."</td>";
+	echo "<td>".$row['T2reb']."</td>";
+	echo "<td>".$row['T2ast']."</td>";
+	echo "<td>".$row['T2stl']."</td>";
+	echo "<td>".$row['T2blk']."</td>";
+	echo "<td>".$row['T2to']."</td>";
+	echo "<td>".$row['T2pf']."</td>";
+    echo "</tr>";
+	echo "<tr>";
+    echo "<td>".$row['none']."</td>";
+    echo "<td>".$row['T2total']."</td>";
+	echo "<td>".$row['T2pts']."</td>";
+	echo "<td>".$row['T2fgm']."</td>";
+	echo "<td>".$row['T2fga']."</td>";
+	echo "<td>".$row['T2fg%']."</td>";
+	echo "<td>".$row['T23pm']."</td>";
+	echo "<td>".$row['T23pa']."</td>";
+    echo "<td>".$row['T23p%']."</td>";
+    echo "<td>".$row['T2ftm']."</td>";
+	echo "<td>".$row['T2fta']."</td>";
+	echo "<td>".$row['T2ft%']."</td>";
+	echo "<td>".$row['T2off']."</td>";
+	echo "<td>".$row['T2def']."</td>";
+	echo "<td>".$row['T2reb']."</td>";
+	echo "<td>".$row['T2ast']."</td>";
+	echo "<td>".$row['T2stl']."</td>";
+	echo "<td>".$row['T2blk']."</td>";
+	echo "<td>".$row['T2to']."</td>";
+	echo "<td>".$row['T2pf']."</td>";	
+	echo "</tr>";
+}
+?>
 	</table>
 </div>
 </section>

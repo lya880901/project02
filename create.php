@@ -2,7 +2,8 @@
 if (isset($_POST["action"])&&($_POST["action"] == "add")) {
 
     include("connMySQL.php");
-
+	$table = $_POST['table'];
+	echo "資料表:$table";
     $number = $_POST["number"];
 	$name = $_POST["name"];
 	$twom = $_POST["twom"];
@@ -11,9 +12,9 @@ if (isset($_POST["action"])&&($_POST["action"] == "add")) {
 	$threea = $_POST["threea"];
 	$ftm = $_POST["ftm"];
 	$fta = $_POST["fta"];
-    $score = $_POST['score'];
+    $score = $_POST["score"];
 
-    $sql_query = "INSERT INTO data (number, name, twom, twoa, threem, threea, ftm, fta, score) VALUES ('$number', '$name', '$twom', '$twoa', '$threem', '$threea', '$ftm', '$fta', '$score')";
+    $sql_query = "INSERT INTO $table (number, name, twom, twoa, threem, threea, ftm, fta, score) VALUES ('$number', '$name', '$twom', '$twoa', '$threem', '$threea', '$ftm', '$fta', '$score')";
     mysqli_query($db_link,$sql_query);
     header("Location: index.php");
 }
@@ -28,6 +29,10 @@ if (isset($_POST["action"])&&($_POST["action"] == "add")) {
 </head>
 <body>
 <div id="app">
+	<?php
+		$table = $_POST['table'];
+	    echo "$table";
+	?>
 <ul>
   <li><a class="active" href="index.php">{{main}}</a></li>
   <li><a href="create.php">{{create}}</a></li>
@@ -67,11 +72,19 @@ if (isset($_POST["action"])&&($_POST["action"] == "add")) {
 			ftm:'罰球命中',
 			fta:'罰球未中',
 			score:'得分',
+			reboff:'籃板球進攻',
+			rebdef:'籃板球防守',
+			ast:'助攻',
+			stl:'搶截',
+			bs:'阻攻',
+			to:'失誤',
+			pf:'犯規',
+			min:'出賽時間',
 			input:'請輸入',
 			data:'資料',
 			reset:'重置',
 		}
 	});
-</script>
+	</script>
 </body>
 </html>
